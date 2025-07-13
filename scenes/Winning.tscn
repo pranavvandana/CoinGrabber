@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://d20ei4d4wqhvd"]
+
+[ext_resource type="Script" uid="uid://bquy0l6riwo7v" path="res://scripts/winning.gd" id="1_whmby"]
+
+[node name="Winning" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_whmby")
+
+[node name="YOU WON" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 556.0
+offset_top = 277.0
+offset_right = 635.0
+offset_bottom = 302.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WON!"
+
+[node name="Play Again" type="Button" parent="."]
+offset_left = 555.0
+offset_top = 386.0
+offset_right = 643.0
+offset_bottom = 417.0
+text = "Play Again"
+
+[connection signal="pressed" from="Play Again" to="." method="_on_play_again_pressed"]

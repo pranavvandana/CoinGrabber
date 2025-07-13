@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsewbvrk28pqw"]
+
+[ext_resource type="Script" uid="uid://cbqom050m4wbp" path="res://scripts/loosing.gd" id="1_tsnp8"]
+
+[node name="Losing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tsnp8")
+
+[node name="YOU LOSE!" type="Label" parent="."]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 147.0
+offset_right = 441.0
+offset_bottom = 170.0
+text = "YOU LOSE!"
+
+[node name="Play Again" type="Button" parent="."]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 301.0
+offset_right = 445.0
+offset_bottom = 332.0
+text = "Play Again"
+
+[connection signal="pressed" from="Play Again" to="." method="_on_play_again_pressed"]

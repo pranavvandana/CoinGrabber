@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi6ywsf0y8638"]
+
+[ext_resource type="PackedScene" uid="uid://dhq8jra2lpuec" path="res://scenes/player.tscn" id="1_4flbx"]
+
+[node name="Player" instance=ExtResource("1_4flbx")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+frame = 0
+frame_progress = 0.0
