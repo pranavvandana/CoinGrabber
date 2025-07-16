@@ -45,5 +45,5 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func die():
-	var game_manager = get_tree().get_root(	).get_node("Game/GameManager")
+	var game_manager = get_tree().get_root().get_node("Game/GameManager")
 	game_manager.show_lose_screen()

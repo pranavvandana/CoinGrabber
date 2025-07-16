@@ -3,7 +3,7 @@ extends Area2D
 @onready var animation_player = $AnimationPlayer
 signal collected
 
-func _ready():
+func _ready(): 
 	add_to_group("Coins")
 	animation_player.connect("animation_finished", Callable(self, "_on_animation_finished"))
 

@@ -13,11 +13,15 @@ config_version=5
 config/name="Coin Grabber"
 run/main_scene="uid://b8drdah4l01n3"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://4131pn83ap5s"
 
 [autoload]
 
 Music="*res://scenes/music.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/wakatime/plugin.cfg")
 
 [input]
 

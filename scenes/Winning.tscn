@@ -21,6 +21,7 @@ grow_vertical = 2
 text = "YOU WON!"
 
 [node name="Play Again" type="Button" parent="."]
+layout_mode = 0
 offset_left = 555.0
 offset_top = 386.0
 offset_right = 643.0
