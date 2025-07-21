@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d20ei4d4wqhvd"]
+[gd_scene load_steps=7 format=3 uid="uid://d20ei4d4wqhvd"]
 
 [ext_resource type="Script" uid="uid://bquy0l6riwo7v" path="res://scripts/winning.gd" id="1_whmby"]
-[ext_resource type="FontFile" uid="uid://cwc8f0il60sh5" path="res://assets/kenney_new-platformer-pack-1/Sprites/Tiles/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_cwfj6"]
+[ext_resource type="FontFile" uid="uid://cwc8f0il60sh5" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_cwfj6"]
 [ext_resource type="Texture2D" uid="uid://wo80iy72qrv2" path="res://assets/kenney_new-platformer-pack-1/Vector/Tiles/star.svg" id="3_g53tt"]
-[ext_resource type="FontFile" uid="uid://cwc8f0il60sh5" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="4_7xwp2"]
 
 [sub_resource type="Gradient" id="Gradient_g53tt"]
 offsets = PackedFloat32Array(0, 0.15, 0.283333, 0.393333, 0.513333, 0.606667, 0.746667, 1)
@@ -27,15 +26,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1284.0
-offset_top = 764.0
-offset_right = 1542.0
-offset_bottom = 800.0
+offset_left = 1309.0
+offset_top = 770.0
+offset_right = 1427.0
+offset_bottom = 787.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_fonts/font = ExtResource("2_cwfj6")
-theme_override_font_sizes/font_size = 35
 text = "YOU WON!"
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
@@ -53,12 +51,10 @@ color_ramp = SubResource("Gradient_g53tt")
 
 [node name="Play Again" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1289.0
-offset_top = 835.0
-offset_right = 1441.0
-offset_bottom = 866.0
-theme_override_fonts/font = ExtResource("4_7xwp2")
-theme_override_font_sizes/font_size = 25
+offset_left = 1324.0
+offset_top = 837.0
+offset_right = 1412.0
+offset_bottom = 868.0
 text = "Play Again"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

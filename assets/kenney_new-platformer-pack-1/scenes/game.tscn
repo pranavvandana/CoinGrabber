@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://srt4j40bl7d2" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://dhq8jra2lpuec" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="FontFile" uid="uid://cwc8f0il60sh5" path="res://assets/kenney_new-platformer-pack-1/Sprites/Tiles/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_0tnpc"]
+[ext_resource type="FontFile" uid="uid://cwc8f0il60sh5" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://dhlsbbwgusrbb" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/summer_.png" id="2_gee14"]
 [ext_resource type="Texture2D" uid="uid://80gjh0c4inmd" path="res://assets/kenney_new-platformer-pack-1/Nature Platformer Tileset [16x16][FREE] - RottingPixels/screenshot-2.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://w0av4o4jpgcd" path="res://scenes/platform.tscn" id="3_lnu2h"]
@@ -2944,5 +2944,4 @@ offset_top = -81.0
 offset_right = 846.0
 offset_bottom = -55.0
 theme_override_colors/font_color = Color(0.0117647, 0.14902, 0.34902, 1)
-theme_override_fonts/font = ExtResource("2_0tnpc")
 text = "Almost there!"

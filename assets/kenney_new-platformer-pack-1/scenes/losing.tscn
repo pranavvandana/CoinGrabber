@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsewbvrk28pqw"]
+
+[ext_resource type="Script" uid="uid://cbqom050m4wbp" path="res://scripts/loosing.gd" id="1_tsnp8"]
+[ext_resource type="FontFile" uid="uid://cwc8f0il60sh5" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_5naax"]
+
+[node name="Losing" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tsnp8")
+
+[node name="YOU LOSE!" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1694.0
+offset_top = 969.0
+offset_right = 1826.0
+offset_bottom = 986.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5naax")
+text = "YOU LOSE!"
+
+[node name="Play Again" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1716.0
+offset_top = 1043.0
+offset_right = 1804.0
+offset_bottom = 1074.0
+text = "Play Again"
+
+[connection signal="pressed" from="Play Again" to="." method="_on_play_again_pressed"]

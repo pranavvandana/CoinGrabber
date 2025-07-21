@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Coin Grabber"
+config/name="CoinGrabber"
 run/main_scene="uid://b8drdah4l01n3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://4131pn83ap5s"

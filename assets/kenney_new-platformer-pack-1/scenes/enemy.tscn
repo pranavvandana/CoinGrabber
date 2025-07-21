@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://cojecra12vnj1"]
+
+[ext_resource type="Script" uid="uid://btxqguj68p650" path="res://scripts/enemy.gd" id="1_c4w8v"]
+[ext_resource type="Texture2D" uid="uid://bik8unthoqo83" path="res://assets/kenney_new-platformer-pack-1/Vector/Enemies/barnacle_attack_a.svg" id="1_iifgy"]
+[ext_resource type="Texture2D" uid="uid://c1xvvuyvjqvrx" path="res://assets/kenney_new-platformer-pack-1/Vector/Enemies/barnacle_attack_b.svg" id="2_epg4t"]
+[ext_resource type="Texture2D" uid="uid://x7tblyp6s4yd" path="res://assets/kenney_new-platformer-pack-1/Vector/Enemies/barnacle_attack_rest.svg" id="3_3yqyl"]
+[ext_resource type="PackedScene" uid="uid://b3exad8do3yqq" path="res://scenes/killzone.tscn" id="4_wujgv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb8ge"]
+atlas = ExtResource("1_iifgy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1ltt"]
+atlas = ExtResource("2_epg4t")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxifv"]
+atlas = ExtResource("3_3yqyl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwjut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb8ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1ltt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxifv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0g06"]
+size = Vector2(44, 53)
+
+[node name="Enemy" type="Node2D"]
+script = ExtResource("1_c4w8v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -19)
+scale = Vector2(0.554688, 0.523438)
+sprite_frames = SubResource("SpriteFrames_pwjut")
+autoplay = "default"
+flip_h = true
+
+[node name="Killzone" parent="AnimatedSprite2D" instance=ExtResource("4_wujgv")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Killzone"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_n0g06")
+
+[node name="RayCastRight" type="RayCast2D" parent="AnimatedSprite2D/Killzone"]
+position = Vector2(0, 5.73134)
+scale = Vector2(1.80282, 1.91045)
+target_position = Vector2(9, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="AnimatedSprite2D/Killzone"]
+position = Vector2(0, 5.73134)
+scale = Vector2(1.80282, 1.91045)
+target_position = Vector2(-15, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(-1, -15)
+target_position = Vector2(19, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(-1, -15)
+target_position = Vector2(-15, -1)

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsewbvrk28pqw"]
+[gd_scene load_steps=4 format=3 uid="uid://dsewbvrk28pqw"]
 
 [ext_resource type="Script" uid="uid://cbqom050m4wbp" path="res://scripts/loosing.gd" id="1_tsnp8"]
+[ext_resource type="FontFile" uid="uid://cwc8f0il60sh5" path="res://assets/kenney_new-platformer-pack-1/Sprites/Tiles/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_5naax"]
+[ext_resource type="FontFile" uid="uid://cwc8f0il60sh5" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_exfn1"]
 
 [node name="Losing" type="Control"]
 layout_mode = 3
@@ -13,18 +15,23 @@ script = ExtResource("1_tsnp8")
 
 [node name="YOU LOSE!" type="Label" parent="."]
 layout_mode = 0
-offset_left = 363.0
-offset_top = 147.0
-offset_right = 441.0
-offset_bottom = 170.0
+offset_left = 1632.0
+offset_top = 972.0
+offset_right = 1921.0
+offset_bottom = 1008.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5naax")
+theme_override_font_sizes/font_size = 35
 text = "YOU LOSE!"
 
 [node name="Play Again" type="Button" parent="."]
 layout_mode = 0
-offset_left = 357.0
-offset_top = 301.0
-offset_right = 445.0
-offset_bottom = 332.0
+offset_left = 1662.0
+offset_top = 1047.0
+offset_right = 1895.0
+offset_bottom = 1081.0
+theme_override_fonts/font = ExtResource("3_exfn1")
+theme_override_font_sizes/font_size = 25
 text = "Play Again"
 
 [connection signal="pressed" from="Play Again" to="." method="_on_play_again_pressed"]
